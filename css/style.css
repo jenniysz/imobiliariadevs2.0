@@ -1,0 +1,324 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap');
+
+body {
+    margin: auto;
+
+    p,
+    h1,
+    h2 {
+        font-family: "Bebas Neue", Arial, Helvetica, sans-serif;
+        text-align: center;
+    }
+
+}
+
+.menu ul,
+a {
+    list-style: none;
+    padding: 3px 0px;
+    text-decoration: none;
+    color: unset;
+    font-weight: bolder;
+    font-size: 20px;
+    display: flex;
+    justify-content: space-around;
+    margin: auto;
+
+}
+
+header .menu .link {
+    width: auto;
+    height: 33px;
+    background-color: rgb(255, 255, 255);
+    transition: background-color 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease-in-out;
+
+}
+
+header .menu .link:hover {
+    color: #ffffff;
+    background-color: black;
+    opacity: 1;
+    border-radius: 8px;
+    transform: scale(1.15);
+}
+
+
+header .meio-img {
+    max-width: 100%;
+    height: auto;
+}
+
+header .meio-img img {
+    max-width: 100%;
+    height: auto;
+}
+
+.central {
+    margin-top: 25px;
+    margin-bottom: 25px;
+    font-size: 35px;
+
+}
+
+section#imoveisemdestaque {
+    padding: 30px 50px 30px 50px;
+}
+
+section#imoveisemdestaque .imovéisdestaque {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 60px;
+}
+
+section#imoveisemdestaque .anuncio {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border: 0px solid #f6f7f8;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px #03030291;
+    text-align: center;
+    background-image: linear-gradient(to right, #0a0c0f9a, #3f250344, #6D6D69);
+    overflow: hidden;
+    padding: 25px 0px;
+    transition: transform 0.3s ease-in-out;
+}
+
+section#imoveisemdestaque .anuncio:hover {
+    transform: scale(1.1);
+    box-shadow: 16px 18px 25px #030303;
+}
+
+section#imoveisemdestaque .imagem-imovel {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+section#imoveisemdestaque .info {
+    padding: 16px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+section#imoveisemdestaque .nome-imovel {
+    font-size: 1.6em;
+    color: rgba(0, 0, 0, 0.705);
+    margin: 0 0 8px;
+}
+
+section#imoveisemdestaque .descricao {
+    font-size: 1em;
+    color: rgb(27, 26, 26);
+    margin: 0 0 16px;
+}
+
+section#imoveisemdestaque .preco {
+    font-size: 1.2em;
+    color: rgba(15, 15, 15, 0.719);
+    font-weight: bold;
+}
+
+section#imoveisemdestaque .anuncio {
+    min-height: 495px;
+}
+
+#mapa {
+    padding: 35px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+
+#mapa .mapa {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    height: 0;
+}
+
+#mapa iframe {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.corretores {
+    margin: 0 15px 30px 15px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 10px 15px #80808069;
+    border-radius: 7px;
+    background-image: linear-gradient(to right, #6A8A7D, #425b58ce, #2a3c40e0);
+    overflow: hidden;
+    width: 210px;
+    height: 220px;
+
+}
+
+.imagem {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+.corretores:hover .imagem {
+    transform: translateY(-200px);
+    opacity: 0;
+}
+
+.conteudo {
+    position: absolute;
+    opacity: 0;
+
+    p,
+    li,
+    img {
+        font-size: 20px;
+        margin: 4px 3px;
+
+
+    }
+
+    a {
+        justify-content: left;
+    }
+
+    img {
+        width: 20px;
+        height: 20px;
+    }
+
+
+}
+
+.corretores:hover .conteudo {
+    list-style: none;
+    opacity: 1;
+    transition: transform 1.5s ease-in-out, opacity 1.5s ease-in-out;
+
+
+}
+
+.corretores-sect {
+    text-align: center;
+    background-image: linear-gradient(to right, #343434f2, #000000);
+    color: white;
+    padding: 30px;
+
+    p {
+        font-size: 18px;
+    }
+
+}
+
+.institucional {
+    margin: 35px;
+
+    h1 {
+        margin-bottom: 20px;
+
+    }
+
+    p {
+        font-family: "Sora", Arial, Helvetica, sans-serif;
+        font-size: 15px;
+        padding: 8px;
+    }
+}
+
+.rodape {
+    background-image: linear-gradient(to right, #343434f2, #000000);
+    color: #fff;
+    padding: 20px;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.imagem-rodape {
+    margin-left: 15px;
+    margin-top: 50px;
+    padding: 0px 15px;
+}
+
+.imagem-rodape img {
+    width: 200px;
+}
+
+.sobre-nos,
+.links-rapidos,
+.contato,
+.siga-nos {
+    flex: 1;
+    margin: 15px;
+    align-items: center;
+}
+
+footer h2 {
+    font-size: 18px;
+}
+
+footer p {
+    font-size: 15px;
+    font-family: "Sora", Arial, Helvetica, sans-serif;
+}
+
+footer ul {
+    list-style: none;
+    padding-left: 50px;
+
+}
+
+footer ul li {
+    margin-bottom: 5px;
+    font-family: "Sora", Arial, Helvetica, sans-serif;
+}
+
+footer a {
+    color: #fff;
+    font-size: 15px;
+    text-decoration: none;
+    justify-content: flex-start;
+    padding-left: 20px;
+    font-family: "Sora", Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+.siga-nos img {
+    width: 15px;
+    height: 15px;
+    margin-right: 5px;
+}
+
+.siga-nos li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+    font-family: "Sora", Arial, Helvetica, sans-serif;
+}
