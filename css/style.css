@@ -321,6 +321,7 @@ footer a:hover {
     align-items: center;
     margin-bottom: 5px;
     font-family: "Sora", Arial, Helvetica, sans-serif;
+
 }
 
 /* Botão flutuante de WhatsApp */
@@ -350,3 +351,5 @@ footer a:hover {
     transform: scale(1.1);
     box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3);
 }
+
+
