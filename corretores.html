@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Corretores</title>
+    <style>
+
+        @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+        body {
+            font-family: "Bebas Neue", Arial, Helvetica, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-image: linear-gradient(to right, #343434f2, #000000);
+        }
+
+        h1 {
+            margin: 20px;
+            text-align: center;
+            font-size: 24px;
+            color: #fff ;
+        }
+
+        .corretor-lista {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+            width: 80%;
+            margin: 20px 0;
+        }
+
+        .corretor-item {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 15px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .corretor-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .corretor-item button {
+            background-color: #25d366;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 15px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .corretor-item button:hover {
+            background-color: #1da855;
+        }
+    </style>
+</head>
+<body>
+    <h1>Lista de Corretores</h1>
+    <div class="corretor-lista">
+        <div class="corretor-item">
+            <p>Jarlis Cunha</p>
+            <button onclick="window.open('https://wa.me/5583981186478?text=Olá, Jarlis! Estou interessado em saber mais sobre os imóveis.')">Falar no WhatsApp</button>
+        </div>
+        <div class="corretor-item">
+            <p>Jennifer Caroline</p>
+            <button onclick="window.open('https://wa.me/5581993384406?text=Olá, Jennifer! Estou interessado em saber mais sobre os imóveis.')">Falar no WhatsApp</button>
+        </div>
+        <div class="corretor-item">
+            <p>Raffael Lucas</p>
+            <button onclick="window.open('https://wa.me/5583988370906?text=Olá, Raffael! Estou interessado em saber mais sobre os imóveis.')">Falar no WhatsApp</button>
+        </div>
+        <div class="corretor-item">
+            <p>Matheus Henrique</p>
+            <button onclick="window.open('https://wa.me/5583987200730?text=Olá, Matheus! Estou interessado em saber mais sobre os imóveis.')">Falar no WhatsApp</button>
+        </div>
+        <div class="corretor-item">
+            <p>Arthur Vinícius</p>
+            <button onclick="window.open('https://wa.me/558398135777?text=Olá, Arthur! Estou interessado em saber mais sobre os imóveis.')">Falar no WhatsApp</button>
+        </div>
+    </div>
+</body>
+</html>
