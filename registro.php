@@ -5,7 +5,7 @@ session_start();
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Login</title>
+    <title>Cadastro</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -16,7 +16,7 @@ session_start();
             height: 100vh;
             margin: 0;
         }
-        .login-container {
+        .register-container {
             background-color: #ffffff;
             padding: 40px;
             border-radius: 10px;
@@ -24,20 +24,22 @@ session_start();
             max-width: 400px;
             width: 100%;
         }
-        .login-container h2 {
+        .register-container h2 {
             margin-bottom: 20px;
             color: #333333;
             font-size: 24px;
             text-align: center;
         }
-        .login-container label {
+        .register-container label {
             display: block;
             font-weight: bold;
             margin-bottom: 5px;
             color: #333333;
         }
-        .login-container input[type="email"],
-        .login-container input[type="password"] {
+        .register-container input[type="text"],
+        .register-container input[type="email"],
+        .register-container input[type="password"],
+        .register-container input[type="tel"] {
             width: 100%;
             padding: 10px;
             margin-bottom: 20px;
@@ -46,41 +48,37 @@ session_start();
             box-sizing: border-box;
             font-size: 16px;
         }
-        .login-container button {
+        .register-container button {
             width: 100%;
             padding: 12px;
-            background-color: #007bff;
+            background-color: #28a745;
             color: #ffffff;
             border: none;
             border-radius: 5px;
             cursor: pointer;
             font-size: 18px;
         }
-        .login-container button:hover {
-            background-color: #0056b3;
-        }
-        .login-container a {
-            display: block;
-            margin-top: 10px;
-            text-align: center;
-            color: #007bff;
-            text-decoration: none;
-        }
-        .login-container a:hover {
-            color: #0056b3;
+        .register-container button:hover {
+            background-color: #218838;
         }
     </style>
 </head>
 <body>
-    <div class="login-container">
-        <h2>Login</h2>
-        <form action="login.php" method="POST">
+    <div class="register-container">
+        <h2>Cadastro</h2>
+        <form action="registro.php" method="POST">
+            <label for="name">Nome:(Apenas o primeiro)</label>
+            <input type="text" id="name" name="name" required>
             <label for="email">Email:</label>
             <input type="email" id="email" name="email" required>
             <label for="password">Senha:</label>
             <input type="password" id="password" name="password" required>
-            <button type="submit">Entrar</button>
-            <a href="registro.php">Não tem uma conta? Cadastre-se aqui</a>
+            <label for="phone">Telefone:</label>
+            <input type="tel" id="phone" name="phone" required>
+            <label for="address">Endereço:</label>
+            <input type="text" id="address" name="address" required>
+            <button type="submit">Cadastrar</button>
+                       <a href="login.php">Voltar para login</a>
         </form>
         <?php
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -88,26 +86,27 @@ session_start();
         $username = "usuariopadrao";
         $password = "";
         $dbname = "registro";
-
             $conn = new mysqli($servername, $username, $password, $dbname);
 
             if ($conn->connect_error) {
                 die("Conexão falhou: " . $conn->connect_error);
             }
 
+            $nome = $_POST['name'];
             $email = $_POST['email'];
             $senha = $_POST['password'];
+            $telefone = $_POST['phone'];
+            $endereco = $_POST['address'];
 
-            $sql = "SELECT nome FROM usuarios WHERE email='$email' AND senha='$senha'";
-            $result = $conn->query($sql);
+            $sql = "INSERT INTO usuarios (nome, email, senha, telefone, endereco)
+            VALUES ('$nome', '$email', '$senha', '$telefone', '$endereco')";
 
-            if ($result->num_rows > 0) {
-                $row = $result->fetch_assoc();
-                $nome = $row['nome'];
-                header("Location: ../index.php?nome=" . urlencode($nome));
+            if ($conn->query($sql) === TRUE) {
+                $_SESSION['username'] = $nome;
+                header("Location: login.php");
                 exit();
             } else {
-                echo "<p>Email ou senha inválidos!</p>";
+                echo "<p>Erro: " . $sql . "<br>" . $conn->error . "</p>";
             }
 
             $conn->close();
