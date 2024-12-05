@@ -14,7 +14,7 @@
 
 <body>
     <header>
-        <nav class="menu"><!-- Menu -->
+        <nav class="menu">
             <ul>
                 <li><a class="link" href="#imoveisemdestaque">
                         <p>Imovéis</p>
@@ -32,8 +32,17 @@
                         <p>Fale Conosco</p>
                     </a></li>
             </ul>
-        </nav>
-        <div class="meio-img"><!--- Cover -->
+    </nav>
+    <div class="login-container">
+        <form action="login.php" method="post" class="login-form">
+            <label for="email">Email:</label>
+            <input type="text" id="email" name="email" placeholder="Digite seu Email" required>
+            <label for="password">Senha:</label>
+            <input type="password" id="password" name="password" placeholder="Digite sua senha" required>
+            <button type="submit">Login</button>
+        </form>
+        <a href="cadastro.php" class="cadastro-link">Cadastre-se</a>
+        <div class="meio-img">
             <picture>
                 <source media="(max-width: 750px)" srcset="img/logos/imob-P.png" type="image/png">
                 <source media="(max-width: 1050px)" srcset="img/logos/imob-M.png" type="image/png">
@@ -118,14 +127,14 @@
         </div>
     </section>
 
-    <section> <!-- Cover 2 -->
+    <section>
         <picture class="card">
             <source media="(max-width: 750px)" srcset="img/logos/ajudar-P.png" type="image/png">
             <source media="(max-width: 1050px)" srcset="img/logos/ajudar-M.png" type="image/png">
             <img src="img/logos/ajudar-G.png" alt="Imagem Flexivel">
         </picture>
     </section>
-    <section id="mapa"> <!--Mapa-->
+    <section id="mapa"> 
         <h2 class="central" class="local" id="escritorio">Escritório</h2>
         <div class="mapa">
             <iframe
@@ -133,7 +142,7 @@
                 width="1100px" height="650" style="border:0;" allowfullscreen="" loading="lazy"
                 referrerpolicy="no-referrer-when-downgrade"></iframe>
     </section>
-    <section class="corretores-sect" id="corretores"><!--Corretores-->
+    <section class="corretores-sect" id="corretores">
         <p>Se ficou interessado em nos conhecer ou se tiver dúvidas entre em contato com algum de nossos corretores
             abaixo:</p>
         <h2 class="central">Corretores</h2>
@@ -230,7 +239,29 @@
                         </a></li>
                 </ul>
             </div>
+            <div class="corretores"><img src="img/corretores/felipe.jpg" alt="felipe" class="imagem"> <!-- Felipe -->
+                <ul class="conteudo">
+                    <li><a href="https://www.instagram.com/cunhalimafelipe/" target="_blank" rel="external"><img
+                                src="img/icones/icone-instagram.png" alt="Instagram">
+                            <p>//Instagram</p>
+                        </a></li>
 
+                    <li><a href="https://wa.me/83996683914" target="_blank" rel="external"><img
+                                src="img/icones/icone-whatsapp.png" alt="WhatsApp">
+                            <p>//WhatsApp</p>
+                        </a></li>
+
+                    <li><a href="https://www.linkedin.com/in/jarlis-cunha-01b607267/" target="_blank"
+                            rel="external"><img src="img/icones/icone-linkedin.png" alt="Linkedin">
+                            <p>//Linkedin</p>
+                        </a></li>
+
+                    <li><a href="https://github.com/Felipe891" target="_blank" rel="external"><img
+                                src="img/icones/icone-github.png" alt="Git">
+                            <p>//Git Hub</p>
+                        </a></li>
+                </ul>
+            </div>
             <div class="corretores"><img src="img/corretores/arthur.jpg" alt="arthur" class="imagem"> <!-- Arthur -->
                 <ul class="conteudo">
                     <li><a href="https://www.instagram.com/tuthux/" target="_blank" rel="external"><img
@@ -255,18 +286,8 @@
                 </ul>
             </div>
         </div>
-        </section>
-        <section>
-            <!-- Botão flutuante de WhatsApp -->
-            <a href="corretores.html" class="whatsapp-button" title="Fale com nossos corretores">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
-            </a>  
-        </section>
-        <section id="institucional" class="institucional"> <!--Institucional-->
-
     </section>
-    <section id="institucional" class="institucional"> <!--Institucional-->
-
+    <section id="institucional" class="institucional"> 
         <h1 class="central">Institucional</h2>
             <div>
                 <p>Na Imobiliária DEVS, valorizamos a <b>transparência, a ética e o compromisso</b> com nossos clientes.
@@ -288,7 +309,7 @@
             </div>
             </div>
     </section>
-    <footer class="rodape" id="rodape"> <!--Rodapé-->
+    <footer class="rodape" id="rodape"> 
         <div class="container">
             <div class="imagem-rodape">
                 <img src="icones/Talk_to_us-removebg-preview.png" alt="Sobre nós" style="width: 200px;">
